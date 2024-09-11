@@ -1,0 +1,386 @@
+{
+  "version": "36.0.0",
+  "artifacts": {
+    "LexGenAIDemoFilesStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "LexGenAIDemoFilesStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "LexGenAIDemoFilesStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "LexGenAIDemoFilesStack.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/bc1b80c5b057617db23ba2d37c1626545e3f9917240457614e46308568bfaabf.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "LexGenAIDemoFilesStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "LexGenAIDemoFilesStack.assets"
+      ],
+      "metadata": {
+        "/LexGenAIDemoFilesStack/CfnLexGenAIDemoRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CfnLexGenAIDemoRole8075A559"
+          }
+        ],
+        "/LexGenAIDemoFilesStack/CfnLambdaGenAIDemoRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CfnLambdaGenAIDemoRoleE89AA239"
+          }
+        ],
+        "/LexGenAIDemoFilesStack/SourceMatBucketID-CFN/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SourceMatBucketIDCFNDD0E86F6"
+          }
+        ],
+        "/LexGenAIDemoFilesStack/SourceMatBucketID-CFN/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SourceMatBucketIDCFNPolicy8F4E689A"
+          }
+        ],
+        "/LexGenAIDemoFilesStack/SourceMatBucketID-CFN/Notifications/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SourceMatBucketIDCFNNotificationsCC77286F"
+          }
+        ],
+        "/LexGenAIDemoFilesStack/SourceMatBucketID-CFN/AllowBucketNotificationsToLexGenAIDemoFilesStackreadsourceandbuildindexfunctionCFNCA6264E7": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "SourceMatBucketIDCFNAllowBucketNotificationsToLexGenAIDemoFilesStackreadsourceandbuildindexfunctionCFNCA6264E7B0023BDB"
+          }
+        ],
+        "/LexGenAIDemoFilesStack/IndexBucket-CFN/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IndexBucketCFND5625BE5"
+          }
+        ],
+        "/LexGenAIDemoFilesStack/IndexBucket-CFN/Policy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "IndexBucketCFNPolicyDEBE1C68"
+          }
+        ],
+        "/LexGenAIDemoFilesStack/read-source-and-build-index-function-CFN/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "readsourceandbuildindexfunctionCFN70BC15A3"
+          }
+        ],
+        "/LexGenAIDemoFilesStack/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleB6FB88EC"
+          }
+        ],
+        "/LexGenAIDemoFilesStack/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Role/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketNotificationsHandler050a0587b7544547bf325f094a3db834RoleDefaultPolicy2CF63D36"
+          }
+        ],
+        "/LexGenAIDemoFilesStack/BucketNotificationsHandler050a0587b7544547bf325f094a3db834/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BucketNotificationsHandler050a0587b7544547bf325f094a3db8347ECC3691"
+          }
+        ],
+        "/LexGenAIDemoFilesStack/CFN-runtime-fn/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CFNruntimefnA69E19BE"
+          }
+        ],
+        "/LexGenAIDemoFilesStack/CFN-runtime-fn/InvokeSvFxGy7DX2gxObGGHkXUOYXcVuKE47n240yswOZ4O3Y=": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CFNruntimefnInvokeSvFxGy7DX2gxObGGHkXUOYXcVuKE47n240yswOZ4O3Y43EC5113"
+          }
+        ],
+        "/LexGenAIDemoFilesStack/LexGenAIDemoCfnBot": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LexGenAIDemoCfnBot"
+          }
+        ],
+        "/LexGenAIDemoFilesStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/LexGenAIDemoFilesStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/LexGenAIDemoFilesStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/LexGenAIDemoFilesStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "LexGenAIDemoFilesStack"
+    },
+    "LexGenAIDemoFilesStack-Webcrawler.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "LexGenAIDemoFilesStack-Webcrawler.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "LexGenAIDemoFilesStack-Webcrawler": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "LexGenAIDemoFilesStack-Webcrawler.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/ae47e480253b132bd0f88cbe3307c34430de8362265a6fdd5cb5776ca7ea5379.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "LexGenAIDemoFilesStack-Webcrawler.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "LexGenAIDemoFilesStack-Webcrawler.assets"
+      ],
+      "metadata": {
+        "/LexGenAIDemoFilesStack-Webcrawler/Cfn-gen-ai-demo-web-crawler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CfngenaidemowebcrawlerEDC12DEB"
+          }
+        ],
+        "/LexGenAIDemoFilesStack-Webcrawler/Cfn-gen-ai-demo-web-crawler/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CfngenaidemowebcrawlerDefaultPolicy441CCDC9"
+          }
+        ],
+        "/LexGenAIDemoFilesStack-Webcrawler/web-crawler-docker-image-CFN/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "webcrawlerdockerimageCFN0AB21E70"
+          }
+        ],
+        "/LexGenAIDemoFilesStack-Webcrawler/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/LexGenAIDemoFilesStack-Webcrawler/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/LexGenAIDemoFilesStack-Webcrawler/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/LexGenAIDemoFilesStack-Webcrawler/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "LexGenAIDemoFilesStack-Webcrawler"
+    },
+    "SageMakerStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "SageMakerStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "SageMakerStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "SageMakerStack.template.json",
+        "terminationProtection": false,
+        "tags": {
+          "CreatedBy": "Bkipngeno",
+          "Name": "FinOps",
+          "Owner": "Big Data",
+          "Project": "Financial Operations",
+          "Squad": "GenAI",
+          "Tribe": "Big Data and AI"
+        },
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/fe67249fa5e89e2a15bffc6b07101f93a739be4c52f7e12739100efcf4d73055.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "SageMakerStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "SageMakerStack.assets"
+      ],
+      "metadata": {
+        "/SageMakerStack": [
+          {
+            "type": "aws:cdk:stack-tags",
+            "data": [
+              {
+                "Key": "CreatedBy",
+                "Value": "Bkipngeno"
+              },
+              {
+                "Key": "Name",
+                "Value": "FinOps"
+              },
+              {
+                "Key": "Owner",
+                "Value": "Big Data"
+              },
+              {
+                "Key": "Project",
+                "Value": "Financial Operations"
+              },
+              {
+                "Key": "Squad",
+                "Value": "GenAI"
+              },
+              {
+                "Key": "Tribe",
+                "Value": "Big Data and AI"
+              }
+            ]
+          }
+        ],
+        "/SageMakerStack/Clean-SageMaker-Resources-Function-CFN/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CleanSageMakerResourcesFunctionCFN49D28786"
+          }
+        ],
+        "/SageMakerStack/Create-SageMaker-Endpoint-Function-CFN/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CreateSageMakerEndpointFunctionCFNA342DB59"
+          }
+        ],
+        "/SageMakerStack/Clean-SageMaker-Resources-Function-Schedule/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CleanSageMakerResourcesFunctionScheduleBE07D931"
+          }
+        ],
+        "/SageMakerStack/Clean-SageMaker-Resources-Function-Schedule/AllowEventRuleSageMakerStackCleanSageMakerResourcesFunctionCFNF7041A0E": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CleanSageMakerResourcesFunctionScheduleAllowEventRuleSageMakerStackCleanSageMakerResourcesFunctionCFNF7041A0ED24269FA"
+          }
+        ],
+        "/SageMakerStack/Create-SageMaker-Endpoint-Function-Schedule/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CreateSageMakerEndpointFunctionSchedule37B87E25"
+          }
+        ],
+        "/SageMakerStack/Create-SageMaker-Endpoint-Function-Schedule/AllowEventRuleSageMakerStackCreateSageMakerEndpointFunctionCFN752B9BE3": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CreateSageMakerEndpointFunctionScheduleAllowEventRuleSageMakerStackCreateSageMakerEndpointFunctionCFN752B9BE375E29EF3"
+          }
+        ],
+        "/SageMakerStack/Clean-SageMaker-Resources-Function": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CleanSageMakerResourcesFunction"
+          }
+        ],
+        "/SageMakerStack/existing_sagemaker_endpoint_creation_role": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "existingsagemakerendpointcreationrole"
+          }
+        ],
+        "/SageMakerStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/SageMakerStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/SageMakerStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/SageMakerStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "SageMakerStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}

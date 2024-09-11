@@ -1,0 +1,44 @@
+{
+  "version": "36.0.0",
+  "files": {
+    "bc1b80c5b057617db23ba2d37c1626545e3f9917240457614e46308568bfaabf": {
+      "source": {
+        "path": "LexGenAIDemoFilesStack.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "current_account-current_region": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
+          "objectKey": "bc1b80c5b057617db23ba2d37c1626545e3f9917240457614e46308568bfaabf.json",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
+        }
+      }
+    }
+  },
+  "dockerImages": {
+    "aa91e42c6df9f15d4279cda4fc0f50056588556aaffd32ed6b9dcb5214847903": {
+      "source": {
+        "directory": "asset.aa91e42c6df9f15d4279cda4fc0f50056588556aaffd32ed6b9dcb5214847903"
+      },
+      "destinations": {
+        "current_account-current_region": {
+          "repositoryName": "cdk-hnb659fds-container-assets-${AWS::AccountId}-${AWS::Region}",
+          "imageTag": "aa91e42c6df9f15d4279cda4fc0f50056588556aaffd32ed6b9dcb5214847903",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-image-publishing-role-${AWS::AccountId}-${AWS::Region}"
+        }
+      }
+    },
+    "386137b2664a870bba40b11d135fc2e5cb5620f2dfbc8ebdd3befd4afae9562a": {
+      "source": {
+        "directory": "asset.386137b2664a870bba40b11d135fc2e5cb5620f2dfbc8ebdd3befd4afae9562a"
+      },
+      "destinations": {
+        "current_account-current_region": {
+          "repositoryName": "cdk-hnb659fds-container-assets-${AWS::AccountId}-${AWS::Region}",
+          "imageTag": "386137b2664a870bba40b11d135fc2e5cb5620f2dfbc8ebdd3befd4afae9562a",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-image-publishing-role-${AWS::AccountId}-${AWS::Region}"
+        }
+      }
+    }
+  }
+}
